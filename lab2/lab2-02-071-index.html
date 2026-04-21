@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>数字图书展销平台—春韵</title>
+    <!-- 引入外部CSS样式文件 -->
+    <link rel="stylesheet" href="CSS/lab2-02-071-index.css">
+</head>
+<body>
+    <!-- 头部：固定定位 + 浮动布局 -->
+    <header class="header">
+        <div class="logo">
+            <img src="img/logo.png" alt="网站Logo">
+            <span>墨香书院商城</span>
+        </div>
+        <ul class="nav">
+            <li>首页</li>
+            <li>图书分类</li>
+            <li>热门推荐</li>
+            <li>新书上市</li>
+            <li>联系我们</li>
+        </ul>
+    </header>
+
+    <!-- 主体容器 清除浮动 -->
+    <div class="container">
+        <!-- 左侧栏：相对定位 -->
+        <aside class="leftBox">
+            <h3>📚 图书分类</h3>
+            <ul>
+                <li>计算机编程</li>
+                <li>文学小说</li>
+                <li>历史人文</li>
+                <li>外语学习</li>
+                <li>考试教辅</li>
+                <li>科普读物</li>
+            </ul>
+        </aside>
+
+        <!-- 中间内容区 -->
+        <main class="mainBox">
+            <!-- 图书展示：父相子绝 + 悬停显示隐藏 -->
+            <div class="bookShow">
+                <h3>精选图书</h3>
+
+                <div class="bookItem">
+                    <img src="img/book1.jpg">
+                    <div class="bookInfo">HTML5+CSS3实战</div>
+                </div>
+
+                <div class="bookItem">
+                    <img src="img/book2.jpg">
+                    <div class="bookInfo">python3</div>
+                </div>
+
+                <div class="bookItem">
+                    <img src="img/book3.jpg">
+                    <div class="bookInfo">c++</div>
+                </div>
+            </div>
+
+            <!-- 热门推荐：浮动排列 -->
+            <div class="hotBox">
+                <h3>🔥 热门推荐</h3>
+                <div class="hotItem">零基础前端</div>
+                <div class="hotItem">Python入门</div>
+                <div class="hotItem">数据结构</div>
+                
+            </div>
+            
+            <!-- 新书上市：Table表格布局 -->
+            <div class="newBox">
+                <h3>🆕 新书上市</h3>
+                <table>
+                    <tr>
+                        <th>书名</th>
+                        <th>作者</th>
+                        <th>售价</th>
+                        <th>状态</th>
+                    </tr>
+                    <tr>
+                        <td>HTML5+CSS3实战</td>
+                        <td>前端教研组</td>
+                        <td>49.9</td>
+                        <td>现货</td>
+                    </tr>
+                    <tr>
+                        <td>计算机网络详解</td>
+                        <td>技术达人</td>
+                        <td>59.0</td>
+                        <td>热卖</td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+
+        <!-- 右侧栏：固定定位 促销广告 -->
+        <aside class="rightBox">
+            <h3>🎁 促销活动</h3>
+            <p>满99减30</p>
+            <p>会员专属折扣</p>
+            <p>包邮到家</p>
+            <p>每日秒杀</p>
+        </aside>
+    </div>
+</body>
+</html>
