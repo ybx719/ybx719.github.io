@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>数字图书展销平台-春韵</title>
+    <link rel="stylesheet" href="CSS/lab3-02-071-index.css">
+    <script>
+        function openModal() {
+            document.getElementById("modal").style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <!-- 头部：固定定位 + 浮动布局 -->
+    <header class="header">
+        <div class="logo">
+            <img src="img/logo.png" alt="网站Logo">
+            <span>墨香书院商城</span>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li>首页</li>
+                <li>图书分类</li>
+                <li>热门推荐</li>
+                <li>新书上市</li>
+                <li>联系我们</li>
+                <!-- 登录按钮放在最右侧 -->
+                <li class="login-btn-item" onclick="openModal()">登录</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主体容器 清除浮动 -->
+    <div class="container">
+        <!-- 左侧栏：相对定位 -->
+        <aside class="leftBox">
+            <h3>📚 图书分类</h3>
+            <ul>
+                <li>计算机编程</li>
+                <li>文学小说</li>
+                <li>历史人文</li>
+                <li>外语学习</li>
+                <li>考试教辅</li>
+                <li>科普读物</li>
+            </ul>
+        </aside>
+
+        <main class="mainBox">
+            <div class="bookShow">
+                <h3>精选图书</h3>
+                <div class="bookItem">
+                    <img src="img/book1.jpg" alt="图书">
+                    <div class="bookInfo">限时优惠</div>
+                </div>
+                <div class="bookItem">
+                    <img src="img/book2.jpg" alt="图书">
+                    <div class="bookInfo">爆款推荐</div>
+                </div>
+                <div class="bookItem">
+                    <img src="img/book3.jpg" alt="图书">
+                    <div class="bookInfo">新品上市</div>
+                </div>
+            </div>
+
+            <div class="hotBox">
+                <h3>🔥 热门推荐</h3>
+                <div class="hotItem">零基础前端</div>
+                <div class="hotItem">Python入门</div>
+                <div class="hotItem">数据结构</div>
+            </div>
+
+            <div class="newBox">
+                <h3>🆕 新书上市</h3>
+                <table>
+                    <tr>
+                        <th>书名</th>
+                        <th>作者</th>
+                        <th>售价</th>
+                        <th>状态</th>
+                    </tr>
+                    <tr>
+                        <td>HTML5+CSS3实战</td>
+                        <td>前端教研组</td>
+                        <td>49.9</td>
+                        <td>现货</td>
+                    </tr>
+                    <tr>
+                        <td>计算机网络</td>
+                        <td>技术达人</td>
+                        <td>59.0</td>
+                        <td>热卖</td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+
+        <aside class="rightBox">
+            <h3>🎁 促销活动</h3>
+            <p>满99减30</p>
+            <p>会员专属折扣</p>
+            <p>全场包邮</p>
+            <p>每日秒杀</p>
+            <p>新用户立减20</p>
+            <p>积分兑换礼品</p>
+        </aside>
+    </div>
+
+    <!-- 登录弹窗 -->
+    <div id="modal" class="modal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2>账号登录</h2>
+                <span onclick="closeModal()" class="close-btn">&times;</span>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label>账号</label>
+                        <input type="text" placeholder="请输入账号/手机号">
+                    </div>
+                    <div class="form-group">
+                        <label>密码</label>
+                        <input type="password" placeholder="请输入密码">
+                    </div>
+                    <button type="submit" class="btn-submit">登录</button>
+                    <button type="submit" class="btn-register">注册</button>
+                </form>
+            </div>
+
+            <div class="login-type">
+                <div class="line-text">其他登录方式</div>
+                <div class="icons">
+                    <div class="icon-item">
+                        <img src="img/微信.jpg" alt="微信">
+                        <span>微信</span>
+                    </div>
+                    <div class="icon-item">
+                        <img src="img/QQ.jpg" alt="QQ">
+                        <span>QQ</span>
+                    </div>
+                <div class="icon-item">
+                    <img src="img/支付宝.jpg" alt="支付宝">
+                    <span>支付宝</span>
+                </div>
+                <div class="icon-item">
+                    <img src="img/微博.jpg" alt="微博">
+                    <span>微博</span>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
